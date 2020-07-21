@@ -119,9 +119,9 @@ $ git remote -v
 
 
 
-# 3. 원격 저장소에 업로드
+### 3. 원격 저장소에 업로드
 
-아래의 명령어를 통해 원격 저장소에 commit된 코드를 업로드할 수 있습니다.
+- 아래의 명령어를 통해 원격 저장소에 commit된 코드를 업로드할 수 있습니다.
 
 ```sh
 $ git push origin master
@@ -129,9 +129,9 @@ $ git push origin master
 
 
 
-# 4. 원격 저장소에서 로컬로 가져오기
+### 4. 원격 저장소에서 로컬로 가져오기
 
-github이나 gitlab의 repository 주소를 복사한 후,
+- github이나 gitlab의 repository 주소를 복사한 후,
 
 ```sh
 $ git clone {가져오고자 하는 repository url - .git으로 끝나야함.}
