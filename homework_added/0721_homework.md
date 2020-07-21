@@ -3,13 +3,13 @@
 ### 1. Mutable & Immutable
 
 - Mutable
-  - String
+  - Set
   - List
-  - Range
   - Dictionary
 - Immutable
   - Tuple
-  - Set
+  - String
+  - Range
 
 
 
