@@ -28,6 +28,8 @@ print(prop_div_lst)
 ```python
 numbers = list(map(int, input().split())) # 입력 예시: 1 39 47 18 40 ...
 
+numbers.sort()
+
 median_idx = round(len(numbers)/2)
 
 print(numbers[median_idx])
