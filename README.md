@@ -1,3 +1,1 @@
-# This repository is for...
-
-- Markdown 언어와 git 활용법에 대해 정리해놓는 공간입니다.
+# This repository is for TIL
