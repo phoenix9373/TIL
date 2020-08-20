@@ -10,7 +10,7 @@
 
 ## urls.py
 
-### urls
+### urls(app이 2개 이상인 경우.)
 
 - 같은 project 내에서 서로 다른 앱에 대해 `urls.py`을 작성할 경우
 
@@ -43,12 +43,13 @@
 
 
 - 위와 같이 `urls.py`를 각각의 앱 내에 새로 생성하게 되면 접근할 수 있는 url 경로도 변경된다.
-  - 예를 들어, `throw` url에서 보낸 데이터를 `catch`에서 받았는데 두 url 모두 `articles`의 아래 즉, `articles/throw`, `articles/catch`의 url로 접근해야 동작한다.
+  - <u>예를 들어, `throw` url에서 보낸 데이터를 `catch`에서 받았는데 두 url 모두 `articles`의 아래 즉, `articles/throw`, `articles/catch`의 url로 접근해야 동작한다.</u>
 
 - django는 각각의 앱에서 `urls.py` 파일을 찾을 때, project의 `setting.py` 파일에서 앱을 등록시킨 순서대로 찾는다.
   - 따라서 앱 별로 `templates`가 따로 인식되도록 한다.
   - 먼저, 각각 앱의 `templates` 폴더 내에 해당 앱 이름의 폴더를 만든다.
   - 그 다음 `templates`에 있는 모든 파일을 해당 앱 이름의 폴더로 이동시킨다.
+  - 예시: {app_name}/templates/{html 파일} -> {app_name}/templates/**{app_name}**/{html 파일} 
 
 
 
@@ -62,7 +63,7 @@
     TEMPLATES = [
         {
             ... , 
-            'DIRS': [BASE_DIR / 'first_project' / 'templates',], # 별도의 templates 폴더를 읽어오고 싶을 때.
+            'DIRS': [BASE_DIR / 'first_project' / 'templates'], # 별도의 templates 폴더를 읽어오고 싶을 때. 순서: base / project / templates
             'APP_DIRS': True, # app별 templates 폴더를 읽어오는 속성.
         },
     ]
@@ -112,7 +113,7 @@
 
   
 
-### with 'a' tag
+### with 'a' tag(app이 2개 이상인 경우.)
 
 - `articles` 앱의 `catch.html`에서 url이 `articles/index`인 곳으로 이동하도록 `a 태그`를 생성.
 
