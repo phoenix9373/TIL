@@ -83,7 +83,7 @@
 
 패키지 요구사항 설치
 
-- `pip install -r requirements.txtx`
+- `pip install -r requirements.txt`
 - `-r`은 requirements의 약자.
 
 
