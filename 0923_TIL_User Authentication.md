@@ -180,7 +180,7 @@ class CustomUserCreationForm(UserCreationForm):
 
 
 
-### Abstract base classes
+### :first_quarter_moon_with_face: Abstract base classes
 
 - 테이블에 column으로 만들지 않지만 부모테이블의 데이터를 가져오는 방법
 
