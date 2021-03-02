@@ -28,6 +28,9 @@
       // 아직 생성되지 않은, 또는 많은 자식 요소를 대상으로 하는 경우에
       // 부모 요소 하나를 기준으로 모든 자식 요소에 대해서 이벤트를 등록할 수 있다.
 
+      // 이벤트 위임(event delegation)의 장점
+      // 1. 메모리 누수 방지 -> 1000개의 li 태그에 대해 1000개의 이벤트 함수가 만들어진다? (Bad)
+
       // Bad
       // const lis = document.querySelectorAll('li');
       // lis.forEach(li => {
