@@ -11,7 +11,7 @@
 
 # 브라우저에 url 요청 시
 
-![](\img\Untitled.png)
+![](img\Untitled.png)
 
 - requests/response → 요청 단계
     - 브라우저가 서버에 html 파일을 요청
@@ -82,11 +82,11 @@
 - 개발자 도구 'layers' 에서 확인 가능하다.
 - 해석 : `will-change`가 있으면, 나중에 opacity가 변경될 때마다 전체 레이아웃을 다시 그리기 싫으니까 'img' 태그만 따로 레이아웃을 줘서 변경될 때 하나의 레이아웃만 바뀌도록 해야지.
 
-![](\img\Untitled 2.png)
+![](img\Untitled 2.png)
 
 # CSS trigger - 성능
 
-![](\img\Untitled 3.png)
+![](img\Untitled 3.png)
 
 - Blink → Chrome 브라우저
 - Gecko → 파이어 폭스 브라우저
@@ -98,14 +98,14 @@
 
 ### Opacity
 
-![](\img\Untitled 4.png)
+![](img\Untitled 4.png)
 
 - 크롬에선 Composite만 발생 → 성능 좋음
 - Webkit에선 모두 발생 → 성능 최악
 
 ### transform
 
-![](\img\Untitled 5.png)
+![](img\Untitled 5.png)
 
 - 크롬 → 성능 좋음
 - WebKit → 성능 최악
