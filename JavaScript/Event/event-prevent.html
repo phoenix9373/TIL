@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 250px;
+        height: 250px;
+        background-color: yellow;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" />
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      // 이벤트를 발생시키는 방법에는 두 가지가 있다.
+      // 1. 우리가 이벤트를 발생시키고, 그 다음 브라우저가 일을 처리한다.
+      // 2. 브라우저가 먼저 일을 처리하고, 우리가 이벤트를 발생시킨다.
+
+      // 2번에 해당하는 경우,
+      // 이유 : 스크롤 이벤트의 경우, 앞서 일을 처리한다면 스크롤 이벤트 자체가 더디어진다.
+      document.addEventListener("wheel", (event) => {
+        console.log("scrolling");
+        event.preventDefault();
+        // !에러발생
+        // "passive event listener 안에서는 preventDefault를 이용할 수 없다." 라는 에러가 발생한다.
+        // addEventListener의 3번째 인자인 options에 passive 키를 false로 하면 사용가능하다.
+        // passive -> true인 경우, 브라우저가 먼저 일을 처리한다.
+        // 하지만 기본값이 true로 설정되어 있는 경우, false로 바꾸지 않는 것이 좋다.
+      });
+
+      const checkbox = document.querySelector("input");
+
+      // 1번에 해당하는 경우,
+      checkbox.addEventListener("click", (event) => {
+        console.log("checked");
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
