@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Recipekorea";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Recipekorea";
+}
+
+li {
+  list-style: none;
+}
+
+button,
+input {
+  outline: none;
+  border: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  background-color: aliceblue;
+}
+
+.frame {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+}
+
+.header {
+  padding: 1rem 0;
+  background: linear-gradient(45deg, lightblue, lightcoral);
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: whitesmoke;
+  min-height: 400px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.create-form {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  min-height: 2rem;
+}
+
+.button-icon {
+  width: 100%;
+  min-height: 4rem;
+  background: linear-gradient(45deg, lightblue, lightcoral);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fa-plus {
+  color: white;
+  font-size: 2rem;
+}
+
+.fa-trash {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  transform: scale(1.1);
+  color: lightcoral;
+}
