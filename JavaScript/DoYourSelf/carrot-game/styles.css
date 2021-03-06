@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.app {
+  border-radius: 30px;
+  background-image: url("/img/background.png");
+  background-size: cover;
+  width: 60%;
+  height: 80%;
+  text-align: center;
+  position: relative;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info__btn {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: bisque;
+  transition: all 0.2s ease;
+}
+
+.info__btn:hover,
+.info__btn:hover > i {
+  background-color: beige;
+  transform: scale(1.02);
+}
+
+.info__time,
+.info__count {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.info__time {
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 10px;
+  padding: 4px 24px;
+}
+
+.info__count {
+  background-color: lightcoral;
+  color: white;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.bug,
+.carrot {
+  position: absolute;
+}
