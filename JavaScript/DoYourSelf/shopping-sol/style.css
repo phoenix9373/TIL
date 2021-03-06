@@ -51,6 +51,19 @@ body {
   color: white;
 }
 
+.items__remove {
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: gray;
+  color: white;
+  padding: 2px 4px;
+}
+
+.items__remove:hover {
+  background-color: red;
+  border: 2px solid red;
+}
+
 .item__count {
   color: white;
   background-color: gray;
