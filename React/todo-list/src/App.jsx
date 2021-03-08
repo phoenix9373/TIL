@@ -1,12 +1,12 @@
-import React, { useReducer, useCallback, useMemo, useRef } from "react";
+import React, { useReducer, useMemo } from "react";
 
 // Components
 // import Counter from "./components/Counter";
 import CreateUser from "./components/CreateUser";
 import UserList from "./components/UserList";
 
-// Custom Hook
-import useInputs from "./hooks/useInputs";
+// Immer
+import produce from "immer";
 
 // CSS
 import "./App.css";
@@ -45,11 +45,22 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    // case "CHANGE_INPUT":
-    //   return {
-    //     ...state,
-    //     inputs: { ...state.inputs, [action.name]: action.value },
-    //   };
+    // Immer 패키지 사용
+    // case "CREATE_USER":
+    //   return produce(state, (draft) => {
+    //     draft.users.push(action.user);
+    //   });
+    // case "TOGGLE_USER":
+    //   return produce(state, (draft) => {
+    //     const user = draft.users.find((user) => user.id === action.id);
+    //     user.active = !user.active;
+    //   });
+    // case "REMOVE_USER":
+    //   return produce(state, (draft) => {
+    //     const index = draft.users.findIndex((user) => user.id === action.id);
+    //     draft.users.splice(index, 1);
+    //   });
+    // Immer 패키지 미사용 : 사실 이 경우, 데이터 깊이가 깊지 않아 기존 방법이 낫다.
     case "CREATE_USER":
       return {
         inputs: initialState.inputs, // 초기화
