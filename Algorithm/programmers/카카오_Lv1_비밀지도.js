@@ -13,3 +13,4 @@ const addZero = (n, s) => {
 
 let ans = solution(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28]);
 console.log(ans);
+a;
