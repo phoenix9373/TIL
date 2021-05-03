@@ -9,5 +9,3 @@ const matrixT = matrix.reduce(
   []
 );
 console.log(matrixT);
-
-console.log(matrix.reverse());
