@@ -27,12 +27,15 @@ class Heap {
 
   peek = () => this.heap[0]; // 항상 최상위 노드가 peek된다.
 
+  // 삽입: O(logN)
   insert = (key, value) => {
     const node = { key, value };
     this.heap.push(node);
     this.heapifyUp();
   };
 
+  // 방금 들어온 값과 부모의 값을 비교하면서 끌어올리는 과정
+  // 마지막 인덱스에 값을 삽입하고 끌어올리기 때문에 Up이라는 단어가 들어감.
   heapifyUp = () => {
     let index = this.heap.length - 1;
     const lastInsertedNode = this.heap[index];
@@ -49,20 +52,23 @@ class Heap {
     this.heap[index] = lastInsertedNode;
   };
 
+  // 제거: O(logN)
   remove = () => {
     const count = this.heap.length;
     const rootNode = this.heap[0];
 
+    // 특수 경우, 0 또는 1일 때
     if (count <= 0) return undefined;
     if (count === 1) this.heap = [];
     else {
-      this.heap[0] = this.heap.pop();
+      this.heap[0] = this.heap.pop(); // 가장 마지막에 있는 값을 루트로 가져온다. 길이가 줄어듦.
       this.heapifyDown();
     }
 
     return rootNode;
   };
 
+  // 아래쪽 정리
   heapifyDown = () => {
     let index = 0;
     const count = this.heap.length;
